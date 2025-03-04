@@ -70,7 +70,7 @@ async function addCards() {
                 <p class="genre">${book.genre}</p>
                 <p class="name" id=""bookName>${book.title}</p>
                 <p class="author">${book.author}</p>
-                <p class="cost">${"$" + Math.floor(Math.random() * 10) + 1}</p>
+                <p class="cost">${"$" + Math.floor(Math.random() * 100) }</p>
             </div>
             <div class="mainCardsButtons">
                 <button>Add to Cart</button>
