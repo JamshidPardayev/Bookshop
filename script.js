@@ -64,13 +64,13 @@ async function addCards() {
         mainCards.innerHTML += `
         <div class="mainCards" id="mainCards">
             <div class="mainCardsImg">
-                <img src="https://picsum.photos/200/300?random=100" alt="Book Cover">
+                <img src="https://picsum.photos/200/300?_random=${Math.floor(Math.random() * 100) + 1}" alt="Book Cover">
             </div>
             <div class="mainCardsTitle">
                 <p class="genre">${book.genre}</p>
-                <p class="name">${book.title}</p>
+                <p class="name" id=""bookName>${book.title}</p>
                 <p class="author">${book.author}</p>
-                <p class="cost">$39</p>
+                <p class="cost">${"$" + Math.floor(Math.random() * 10) + 1}</p>
             </div>
             <div class="mainCardsButtons">
                 <button>Add to Cart</button>
@@ -81,3 +81,6 @@ async function addCards() {
         `;
     });
 }
+
+let bookName = document.getElementById("bookName");
+
