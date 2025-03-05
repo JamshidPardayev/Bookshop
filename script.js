@@ -88,7 +88,16 @@ let searchInput = document.getElementById("searchInput");
 let bookName = document.getElementById("bookName");
 
 
-
+let searchCount = 0;
+repost.addEventListener("click", () => {
+    searchInput.placeholder = "Search by Type...";
+    searchCount++;
+    console.log(searchCount);
+    if(searchCount == 1){
+        searchInput.placeholder = "Search by Title...";
+        searchCount -= 2 ;
+    }
+});
 
 function searchFunction(inpValue) {
     const bookTitles = document.querySelectorAll('.bookName');
