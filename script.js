@@ -68,9 +68,9 @@ async function addCards() {
             </div>
             <div class="mainCardsTitle">
                 <p class="genre">${book.genre}</p>
-                <p class="name" id=""bookName>${book.title}</p>
+                <p class="name bookName">${book.title}</p>
                 <p class="author">${book.author}</p>
-                <p class="cost">${"$" + Math.floor(Math.random() * 100) }</p>
+                <p class="cost">${"$" + Math.floor(Math.random() * 100 + 1) }</p>
             </div>
             <div class="mainCardsButtons">
                 <button>Add to Cart</button>
@@ -82,5 +82,23 @@ async function addCards() {
     });
 }
 
+
+let repost = document.getElementById("repost");
+let searchInput = document.getElementById("searchInput");
 let bookName = document.getElementById("bookName");
+
+
+
+
+function searchFunction(inpValue) {
+    const bookTitles = document.querySelectorAll('.bookName');
+
+    bookTitles.forEach((title) => {
+        if (title.textContent.toLowerCase().includes(inpValue.value.toLowerCase())) {
+            title.parentElement.parentElement.style.display = "block";
+        } else {
+            title.parentElement.parentElement.style.display = "none";
+        }
+    });
+}
 

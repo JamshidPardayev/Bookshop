@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat", serif;
+}
+body{
+    background-color: aliceblue;
+}
+form{
+    width: 350px;
+    margin: auto;
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.signUpTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.signUpTitle button{
+    width: 100px;
+    border: none;
+    background-color: #378eff;
+    border-radius: 10px;
+    height: 35px;
+}
+.signUpTitle button:hover{
+    background-color: #0052bd;
+    transition: 1s;
+    cursor: pointer;
+}
+.signUpTitle button a{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.signUpPart{
+    display: flex;
+    flex-direction: column;
+}
+.signUpPart label{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+.signUpPart input{
+    height: 35px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 3px 10px;
+    font-size: 16px;
+}
+.signUpCheckbox{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+.signUpCheckbox input{
+width: 20px;
+height: 20px;
+}
+.send button{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: #378eff;
+    color: white;
+}
+.send button:hover{
+    background-color: #0052bd;
+    transition: 1s;
+    cursor: pointer;
+}
+.forSignIn{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.forSignIn button{
+    height: 30px;
+    width: 100px;
+    background-color: #378eff;
+    border: none;
+    border-radius: 10px;
+}
+.forSignIn button a{
+    color: white;
+}
+.forSignIn button:hover{
+    background-color: #0052bd;
+    transition: 1s;
+    cursor: pointer;
+}

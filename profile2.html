@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<style>
+    td{
+        padding: 5px;
+        border: 1px solid black;
+    }
+    button{
+        width: 120px;
+        height: 40px;
+        border-radius: 15px;
+        border: none;
+        font-size: 16px;
+        margin-top: 10px;
+        color: white;
+        background-color: #378eff;
+    }
+    button:hover{
+    background-color: #0052bd;
+    transition: 1s;
+    cursor: pointer;
+    }
+</style>
+<body>
+    <h2>Profile Page</h2>
+    <p>Xush kelibsiz!</p>
+    <table>
+        <thead>
+            <td>Email</td>
+            <td>Password</td>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <button id="logout">Log Out</button>
+
+
+    <script>
+        let user = JSON.parse(localStorage.getItem("userData"))
+        let tbody = document.querySelector("tbody")
+        let logout = document.getElementById("logout");
+
+        tbody.innerHTML =  `
+            <td>${user.email}</td>
+            <td>${user.password}</td>
+        `
+
+        logout.addEventListener("click", function() {
+            localStorage.clear();
+            window.location.href = "index.html"
+        })
+    </script>
+</body> 
